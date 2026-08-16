@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадробика — искусство движения на четырёх</title>
+    <!-- Подключаем внешние стили -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем Three.js через import map -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Canvas для фоновых частиц -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <!-- Навигация -->
+        <nav>
+            <div class="logo">⚡ Квадробика</div>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#techniques">Техника</a></li>
+                <li><a href="#simulator">Тренировка</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+            </ul>
+        </nav>
+
+        <!-- Главная -->
+        <section id="home">
+            <h1>Движение на четырёх</h1>
+            <p>Искусство перемещения с опорой на руки и ноги</p>
+            <a href="#simulator" class="btn">Начать тренировку</a>
+            <div id="three-container"></div>
+        </section>
+
+        <!-- Техника -->
+        <section id="techniques">
+            <h2 class="section-title">Основные техники</h2>
+            <p class="section-subtitle">Освой базовые движения квадробики для развития силы, координации и гибкости</p>
+            <div class="techniques-grid">
+                <div class="tech-card">
+                    <div class="icon">🐆</div>
+                    <h3>Спринт</h3>
+                    <p>Быстрое перемещение на всех четырёх конечностях с максимальной скоростью</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon">🦍</div>
+                    <h3>Прыжки</h3>
+                    <p>Мощные отталкивания с приземлением на руки и ноги для преодоления препятствий</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon">🐕</div>
+                    <h3>Кросс-степ</h3>
+                    <p>Перекрёстные движения конечностей для развития координации и баланса</p>
+                </div>
+                <div class="tech-card">
+                    <div class="icon">🦎</div>
+                    <h3>Слайды</h3>
+                    <p>Скользящие перемещения с низкой посадкой для экономии энергии</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Симулятор тренировки -->
+        <section id="simulator">
+            <h2 class="section-title">Симулятор тренировки</h2>
+            <p class="section-subtitle">Считай свои шаги и сжигай калории в виртуальном режиме</p>
+            <div class="simulator">
+                <div class="stats">
+                    <div class="stat">Шаги <span id="steps">0</span></div>
+                    <div class="stat">Калории <span id="calories">0</span></div>
+                    <div class="stat">Время <span id="time">0с</span></div>
+                </div>
+                <div>
+                    <button id="stepBtn">➕ Шаг</button>
+                    <button id="startBtn">▶ Старт</button>
+                    <button id="resetBtn" class="reset">⟲ Сброс</button>
+                </div>
+                <p style="margin-top:20px; color:#888; font-size:14px;">Нажимайте "Шаг" или запустите автоматический режим</p>
+            </div>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery">
+            <h2 class="section-title">Вдохновение</h2>
+            <p class="section-subtitle">Стилизованные изображения движений квадробики</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">🏃</div>
+                <div class="gallery-item">🐾</div>
+                <div class="gallery-item">💪</div>
+                <div class="gallery-item">🔥</div>
+                <div class="gallery-item">⚡</div>
+                <div class="gallery-item">🌀</div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer>
+            <p>© 2026 Квадробика — сила в движении</p>
+        </footer>
+    </div>
+
+    <!-- Подключаем основной скрипт (модуль) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
